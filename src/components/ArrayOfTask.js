@@ -1,94 +1,18 @@
 import React, { Component } from "react";
+import data from "../data.json"
 import PropTypes from "prop-types";
 
 class ArrayOfTask extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      taskGroup: [
-        {
-          id: 1, //This id needs to be Unique for each Task
-          details: "Task 1",
-          completed: true
-        },
-        {
-          id: 2, //This id needs to be Unique for each Task
-          details: "Task 2",
-          completed: true
-        },
-        {
-          id: 3, //This id needs to be Unique for each Task
-          details: "Task 3",
-          completed: true
-        },
-        {
-          id: 4, //This id needs to be Unique for each Task
-          details: "Task 4",
-          completed: true
-        },
-        {
-          id: 5, //This id needs to be Unique for each Task
-          details: "Task 5",
-          completed: true
-        },
-        {
-          id: 6, //This id needs to be Unique for each Task
-          details: "Task 6",
-          completed: true
-        },
-        {
-          id: 7, //This id needs to be Unique for each Task
-          details: "Task 7",
-          completed: true
-        },
-        {
-          id: 8, //This id needs to be Unique for each Task
-          details: "Task 8",
-          completed: true
-        },
-        {
-          id: 9, //This id needs to be Unique for each Task
-          details: "Task 9",
-          completed: true
-        },
-        {
-          id: 10, //This id needs to be Unique for each Task
-          details: "Task 10",
-          completed: true
-        },
-        {
-          id: 11, //This id needs to be Unique for each Task
-          details: "Task 11",
-          completed: true
-        },
-        {
-          id: 12, //This id needs to be Unique for each Task
-          details: "Task 12",
-          completed: true
-        },
-        {
-          id: 13, //This id needs to be Unique for each Task
-          details: "Task 13",
-          completed: true
-        },
-        {
-          id: 14, //This id needs to be Unique for each Task
-          details: "Task 14",
-          completed: true
-        },
-        {
-          id: 15, //This id needs to be Unique for each Task
-          details: "Task 15",
-          completed: true
-        },
-        {
-          id: 16, //This id needs to be Unique for each Task
-          details: "Task 16",
-          completed: true
-        }
-      ],
+      taskGroup: [],
       taskLength: 5
     };
+  }
+
+  componentDidMount() {
+    this.setState({taskGroup: data.taskGroup})
   }
 
   showMoreAction = () => {
